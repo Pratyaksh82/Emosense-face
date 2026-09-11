@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+    --card: 224 55% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 55% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262 80% 62%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 224 45% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 224 40% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 224 40% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 262 80% 62%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Glow effects */
+.glow-happy {
+  box-shadow: 0 0 25px -4px hsla(38, 95%, 60%, 0.4);
+}
+.glow-sad {
+  box-shadow: 0 0 25px -4px hsla(196, 75%, 55%, 0.4);
+}
+.glow-angry {
+  box-shadow: 0 0 25px -4px hsla(0, 72%, 51%, 0.4);
+}
+.glow-primary {
+  box-shadow: 0 0 25px -4px hsla(262, 80%, 62%, 0.4);
+}
+.glow-neutral {
+  box-shadow: 0 0 25px -4px hsla(215, 20%, 65%, 0.25);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
